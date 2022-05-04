@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.SplitPane?>
+
+<SplitPane dividerPositions="0.5" prefHeight="402.0" prefWidth="880.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="priv.oms.view.QuarterlySalesController">
+   <items>
+      <BarChart fx:id="quantity_chart" title="Quarterly Sales (quantity)">
+        <xAxis>
+          <CategoryAxis label="Types" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis label="Quantity" side="LEFT" />
+        </yAxis>
+      </BarChart>
+      <BarChart fx:id="sales_chart" title="Quarterly Sales (sales)">
+        <xAxis>
+          <CategoryAxis label="Types" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis label="Sales" side="LEFT" />
+        </yAxis>
+      </BarChart>
+   </items>
+</SplitPane>

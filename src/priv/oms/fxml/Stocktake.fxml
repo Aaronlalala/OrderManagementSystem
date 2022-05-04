@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.SplitPane?>
+
+<SplitPane dividerPositions="0.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="745.0" prefWidth="880.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="priv.oms.view.StocktakeController">
+   <items>
+      <BarChart fx:id="up_bar" title="Quantity in hand (by types)">
+        <xAxis>
+          <CategoryAxis label="Types" side="BOTTOM" fx:id="x_upper" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="y_upper" label="Quantity" side="LEFT" />
+        </yAxis>
+      </BarChart>
+      <BarChart fx:id="low_bar" title="Quantity in hand (by items)">
+        <xAxis>
+          <CategoryAxis label="Productid" side="BOTTOM" fx:id="x_down" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="y_down" label="Quantity" side="LEFT" />
+        </yAxis>
+      </BarChart>
+   </items>
+</SplitPane>

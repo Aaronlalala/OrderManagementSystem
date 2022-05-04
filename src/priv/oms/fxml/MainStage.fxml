@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="priv.oms.view.MainStageController">
+   <top>
+      <Pane prefHeight="55.0" prefWidth="1080.0" style="-fx-background-color: #084366;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="908.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/DefaultUserIcon.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="12.0" layoutY="3.0" prefHeight="48.0" prefWidth="438.0" text="Order Management System" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="35.0" />
+               </font>
+            </Label>
+            <Text fx:id="inputtext" fill="WHITE" layoutX="947.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welecom: admin">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+   </top>
+   <center>
+      <BorderPane fx:id="contentPane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <left>
+            <VBox prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Accordion>
+                    <panes>
+                        <TitledPane animated="false" prefHeight="76.0" prefWidth="200.0" text="Prodcut">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="63.0" prefWidth="150.0">
+                                 <children>
+                                    <VBox fillWidth="false" prefHeight="51.0" prefWidth="200.0">
+                                       <children>
+                                          <Button fx:id="pro_over_butt" alignment="TOP_CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#clic_pro_over_butt" prefHeight="25.0" prefWidth="199.0" text="Overall" />
+                                          <Button fx:id="pro_dic_butt" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#clic_pro_dis_butt" prefHeight="25.0" prefWidth="199.0" text="Discount" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </TitledPane>
+                      <TitledPane animated="false" prefHeight="102.0" prefWidth="151.0" text="Order">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="76.0" prefWidth="198.0">
+                                 <children>
+                                    <VBox fillWidth="false" prefHeight="52.0" prefWidth="200.0">
+                                       <children>
+                                          <Button alignment="TOP_CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#click_order_overall" prefHeight="25.0" prefWidth="199.0" text="Overall" />
+                                          <Button alignment="TOP_CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#click_order_detail" prefHeight="25.0" prefWidth="199.0" text="Order Detail" />
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#click_order_create" prefHeight="25.0" prefWidth="199.0" text="Create Order" />
+                                       </children>
+                                    </VBox>
+                                 </children></AnchorPane>
+                        </content>
+                      </TitledPane>
+                      <TitledPane animated="false" prefHeight="76.0" prefWidth="151.0" text="Customer">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <VBox fillWidth="false" prefHeight="52.0" prefWidth="200.0">
+                                       <children>
+                                          <Button alignment="TOP_CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#click_cus_overall" prefHeight="25.0" prefWidth="199.0" text="Overall" />
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#click_cus_create" prefHeight="25.0" prefWidth="199.0" text="Create Customer" />
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </TitledPane>
+                      <TitledPane animated="false" prefHeight="126.0" prefWidth="151.0" text="DashBoard">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <VBox fillWidth="false" prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Button alignment="TOP_CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#click_stock" prefHeight="25.0" prefWidth="199.0" text="Stocktake" />
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#click_qua_sales" prefHeight="25.0" prefWidth="199.0" text="Quarterly Sales" />
+                                          <Button alignment="TOP_CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#click_cus_demo" prefHeight="25.0" prefWidth="199.0" text="Customer Demographic" />
+                                          <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#click_top" prefHeight="25.0" prefWidth="199.0" text="Monthly Top10" />
+                                       </children>
+                                    </VBox>
+                                 </children></AnchorPane>
+                        </content>
+                      </TitledPane>
+                    </panes>
+                  </Accordion>
+               </children>
+            </VBox>
+         </left>
+      </BorderPane>
+   </center>
+</BorderPane>
